@@ -1,0 +1,200 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+h1 {font-family: 'Roboto', sans-serif;font-weight: 700;}
+.hidden { display: none;}
+html, body {margin: 0; padding: 0;}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #24252A;
+    color:white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove default body margin */
+}
+
+.login-form-container {
+    width: 300px;
+    border-radius: 25px;
+    background-color: #171717;
+    padding: 2em;
+    transition: .4s ease-in-out;
+    margin: 164px auto; /* Center the container */
+}
+
+.login-form-container:hover {
+    transform: scale(1.05);
+    border: 1px solid black;
+}
+
+.login-form-container #heading {
+    text-align: center;
+    margin: 2em 0; /* Adjusted margin */
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+.login-form-container .field {
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    margin-bottom: 10px; /* Spacing between fields */
+}
+
+.login-form-container .input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+    vertical-align: middle; /* Align icon vertically */
+}
+
+
+
+
+.login-form-container .btn {
+    text-align: center; /* Center buttons */
+    margin-top: 2.5em;
+}
+
+.login-form-container .button1,
+.login-form-container .button2,
+.login-form-container .button3 {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+    margin: 0 5px; /* Spacing between buttons */
+}
+
+.login-form-container .button1 {
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+}
+
+.login-form-container .button2 {
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+}
+
+.login-form-container .button3 {
+    display: block; /* Make "Forgot Password" a block element */
+    width: 63%; /* Full width 100%*/
+    margin: 1em auto; /* Center and add margin */
+}
+
+.login-form-container .button1:hover,
+.login-form-container .button2:hover {
+    background-color: black;
+    color: white;
+}
+
+.login-form-container .button3:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Ensure the field container has relative positioning */
+.login-form-container .field {
+    position: relative; /* Make the field container the reference point for absolute positioning */
+    width: 100%; /* Full width to fit the form layout */
+}
+
+.login-form-container .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    /*width: calc(100% - 40px); /* Ensure space for the icon */
+    color: #d3d3d3;
+    vertical-align: middle; /* Align input vertically */
+    padding-right: 40px; /* Add space for the eye icon */
+    position: relative; /* Necessary for absolute positioning of the eye icon */
+}
+
+
+/* Eye icon */
+.login-form-container .input-icon-eye {
+    position: absolute; /* Absolute positioning inside the input field */
+    right: 20px; /* Adjust this value to place the icon correctly */
+    top: 56%; /* Position vertically in the middle */
+    transform: translateY(-50%); /* Perfectly center it vertically */
+    cursor: pointer;
+    color: #4b4b4b; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect */
+.login-form-container .input-icon-eye:hover {
+    color: #2d2d2d; /* Darker color on hover */
+}
+
+
+/* Other CSS For Registration Form*/
+.input2 {
+    display: block;
+    width: 100%;
+    white-space: nowrap; /* Prevents wrapping */
+    text-align: center; /* Centers inputs */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input2 .input-field {
+    display: inline-block;
+    width: 46%; /* Adjust to fit both inputs in one row */
+    padding: 0.6em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    text-align: center;
+}
+
+.input2 .input-field:first-child {
+    margin-right: 1%;
+}
+
+
+/* Apply styles to the select input to make it larger and more clickable */
+.input-field.dropdown {
+    width: 100%; /* Ensure it spans the entire width of its container */
+    padding: -0.2em; /* Adjust padding for better clickability */
+    /*! font-size: 16px; */ /* Consistent font size */
+    color: #d3d3d3; /* Consistent text color */
+    background-color: #171717; /* Consistent background color */
+    border-radius: 25px; /* Matching border-radius */
+    /*! box-shadow: inset 2px 5px 10px rgb(5, 5, 5); */ /* Consistent box-shadow */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Change the cursor to indicate clickability */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: relative; /* Necessary for any future icon or styling */
+}
+/* Optional: Styling the options in the dropdown */
+.input-field.dropdown option {
+    font-size: 16px; /* Consistent font size */
+    padding: 10px; /* Add padding to make options more clickable */
+    background-color: #171717; /* Match background color */
+    color: #d3d3d3; /* Match text color */
+}
+
+/* Hover effect for better interaction */
+.input-field.dropdown:hover {
+    background-color: #252525; /* Slightly lighter background on hover */
+}
+
+
+
+
+
+
+
+
+

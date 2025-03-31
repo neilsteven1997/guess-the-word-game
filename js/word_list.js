@@ -1,0 +1,27 @@
+const word_list = [
+  "angel", "soldier", "angle", "pull", "spy", "record", "swing", "plate", "home",
+  "uncle", "chance", "sweater", "income", "spark", "apparel", "experience",
+  "lunchroom", "fact", "skin", "toothbrush", "sugar", "carriage", "middle", "day",
+  "island", "government", "authority", "front", "icicle", "grain", "payment",
+  "turkey", "hour", "heat", "sidewalk", "place", "boat", "ghost", "jelly", "house",
+  "society", "marble", "connection", "health", "burst", "knife", "rice", "advice",
+  "chicken", "arch", "brass", "volcano", "wheel", "face", "air", "mark", "stitch",
+  "pear", "dogs", "cherries", "thumb", "cactus", "beef", "wall", "flowers", "plough",
+  "reason", "dinner", "rain", "cracker", "quince", "hobbies", "jeans", "quicksand",
+  "office", "event", "vessel", "visitor", "fly", "sense", "mountain", "act", "man",
+  "bead", "animal", "fold", "trains", "waves", "prose", "expert", "quiver", "ship",
+  "creature", "bucket", "education", "title", "action", "border", "look", "scarf",
+  // Added kid-friendly words below:
+  "apple", "ball", "cat", "dog", "sun", "tree", "book", "frog", "bird", "fish",
+  "star", "moon", "cloud", "grass", "hand", "foot", "nose", "mouth", "hair",
+  "bear", "lion", "duck", "cake", "milk", "juice", "bread", "chair", "table",
+  "clock", "shoe", "sock", "hat", "coat", "pants", "shirt", "doll", "toy",
+  "game", "ring", "bell", "drum", "block", "crayon", "paint", "brush", "page",
+  "story", "song", "dance", "jump", "run", "swim", "sleep", "draw", "write",
+  "read", "sing", "clap", "laugh", "cry", "friend", "family", "school", "park",
+  "beach", "river", "road", "city", "farm", "garden", "plant", "leaf", "root",
+  "seed", "stone", "sand", "shell", "wind", "fire", "water", "earth", "sky",
+  "color", "shape", "number", "letter", "music", "movie", "video", "photo",
+  "gift", "party", "happy", "sad", "cold", "warm", "fast", "slow", "loud",
+  "soft", "sweet", "sour", "clean", "dirty", "open", "close", "light", "dark"
+];

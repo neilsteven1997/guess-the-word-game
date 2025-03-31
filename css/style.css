@@ -1,0 +1,600 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+h1 {font-family: 'Roboto', sans-serif;font-weight: 700;}
+.hidden { display: none;}
+html, body {margin: 0; padding: 0;}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #24252A;
+    color:white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove default body margin */
+}
+.bottom{
+  background-color: #24252A;
+  text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+form {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
+
+#showMore{
+    display: none;
+}
+
+
+.masthead h1{
+    color: #ffff;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 0.2em;
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+}
+
+.masthead p{
+  text-align: center;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 31px;
+  margin: 0;
+}
+
+input[type='text']{
+  line-height: 40px;
+  padding: 0px 50px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Start of Container Styles */.container {
+    min-width: 200px;
+    max-width: 80%;
+    min-height: 200px;
+    background: linear-gradient(to top right, #975af4, #2f7cf8 40%, #78aafa 65%, #934cff 100%);
+    position: relative;
+    border-radius: 30px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container::before {
+    content: "";
+    position: fixed; /* Changed to fixed */
+    top: 0; /* Changed to 0 */
+    left: 0; /* Changed to 0 */
+    width: 100%; /* Changed to 100% */
+    height: 100%; /* Changed to 100% */
+    background: radial-gradient(circle, #3498db 10%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #3498db 20%);
+    background-size: 30px 30px;
+    animation: moveBackground 1s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+/* End of Container Styles */
+
+/* General Button Styles */
+    button {
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 7px;
+  }
+  
+  button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Hover Animation (General) */
+  button:hover {
+    transform: translateY(-3px); /* Slightly lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  button:active {
+    transform: translateY(0); /* Return to original position on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow */
+  }
+  
+  /* Specific Button Colors */
+  .guess-button {
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7); /* Blue */
+  }
+  
+  .play-button {
+    background-image: linear-gradient(30deg, #008000, #90ee90); /* Green */
+  }
+  .login-button {
+    background-image: linear-gradient(30deg, #008000, #90ee90); /* Green */
+  }
+  .give-up-button {
+    background-image: linear-gradient(30deg, #ffcc00, #ffef80); /* Yellow */
+    color: #333; /* Darker text for better contrast on yellow */
+  }
+  .quit-button {
+    background-image: linear-gradient(30deg, #8B7355, #A09077); /* Brown */
+    color: #333; /* Darker text for better contrast on yellow */
+  }
+  
+  .load-more-button {
+    background-image: linear-gradient(30deg, #ff0000, #ff6666); /* Red */
+  }
+
+
+  /*Input Design*/
+  .group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    max-width: 200px;
+  }
+  
+  .input {
+    width: 100%;
+    height: 45px;
+    line-height: 30px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+  }
+  
+  .input::placeholder {
+    color: #94a3b8;
+  }
+  
+  .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+  }
+  
+  .icon {
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /*End Of Input Design*/
+
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 500px;
+    min-width: 500px;
+    width: 500px;
+    padding: 4px; /* Adjusted padding */
+    border-radius: 16px;
+    background: linear-gradient(
+      to top right,
+      #975af4,
+      #2f7cf8 40%,
+      #78aafa 65%,
+      #934cff 100%
+    );
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-1rem);
+  }
+  
+  .card:hover ~ .card {
+    transform: translateX(130px);
+  }
+  
+  .card:not(:first-child) {
+    margin-left: -130px;
+  }
+  
+  .card-title-card {
+    display: flex;
+    align-items: center;
+    padding: 16px 18px;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  .card-title-card p {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 2px 2px 6px #2975ee;
+  }
+  
+  .card-content {
+    width: 100%;
+    height: 100%;
+    background-color: #161a20;
+    border-radius: 30px;
+    color: #838383;
+    font-size: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* Add these styles for the image container */
+    position: relative; /* Needed for absolute positioning */
+    overflow: hidden; /* Clips content that overflows */
+  }
+  
+  .card-content .title {
+    font-weight: 600;
+    color: #bab9b9;
+  }
+  
+  .card-content .plain :nth-child(1) {
+    font-size: 36px;
+    color: #fff;
+  }
+  
+  .card-content .card-btn {
+    background: linear-gradient(4deg, #975af4, #2f7cf8 40%, #78aafa 65%, #934cff 100%);
+    padding: 8px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6);
+  }
+  
+  .card-content .card-btn:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #fff;
+    transform: scale(1.03);
+  }
+  
+  .card-content .card-btn:active {
+    transform: scale(1);
+  }
+  
+  .card-content img {
+    /* Image Styles */
+    position: absolute; /* Take image out of normal flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Or 'cover', depending on effect */
+    /* object-position: center;  Center the image within its container */
+  }
+
+  .playercard {
+    height: 252px;
+    border-radius: 50px;
+    background: #1c2164;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 31px;
+    width: 338px; /* Or any fixed width you prefer */
+    margin: 0 auto; /* Centers the div horizontally */
+    margin-bottom: 15px;
+}
+.playercard p{
+  padding:10px;
+}
+
+
+
+  #message {
+    font-size: 1.2rem; /* Use rem for better responsiveness */
+    text-align: center;
+    width: 80%; /* Adjust width for better readability on smaller screens */
+    max-width: 600px; /* Limit maximum width */
+    margin: 2rem auto; /* Center and add vertical spacing */
+    padding: 1.5rem;
+    background-color: gray;
+    /*background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add depth */
+    color: #eee; /* Light text for better visibility on dark backgrounds */
+    font-family: 'Arial', sans-serif; /* Use a readable font */
+    line-height: 1.6; /* Improve line spacing */
+  }
+  
+  #message h2 {
+    font-size: 2.5rem; /* Larger font size for headings */
+    color: #DB7093; /* Rosybrown, but a hex value for consistency */
+    margin-bottom: 0.8rem; /* Add space below heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add depth to heading */
+  }
+  
+  .messages_container {
+    text-align: center;
+  }
+
+.displaystatusinput {
+  height: 45px;
+  line-height: 30;
+  padding: 0 3rem;
+  padding-left: 3rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: .5s ease;
+  margin: 1px;
+  text-align: center;
+}
+
+
+
+#giveUp{
+    display: none;
+}
+
+#pics{
+    display: flex;
+    padding: 0px 48px 0px 48px;
+    overflow-x: scroll;
+    justify-content: center;
+}
+
+#pics::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+#pics::-webkit-scrollbar-thumb{
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%, .25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+#Pics::-webkit-scrollbar-track{
+    background: linear-gradient(
+        90deg, #201c29, #201c29 1px,
+        #17141d 0, #17141d
+    );
+}
+
+/* Start Of Loading Screen Style */
+/* Your provided CSS */
+
+.loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #4c86f9;
+    --second-color: #49a84c;
+    --third-color: #f6bb02;
+    --fourth-color: #f6bb02;
+    --fifth-color: #2196f3;
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+    display: block;
+    gap: 6px;
+}
+
+.loading span {
+    width: 2%;
+    height: 30%;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.loading span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+}
+
+@keyframes scale {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+/* Loading Screen Overlay */
+#loading-screen {
+  position: fixed; /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; 
+  /*background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  z-index: 9999; /* Make sure it's on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Of Loading Screen Style */
+
+/* Start Of Audio Control Style */
+/* level settings 👇 */
+
+.slider {
+  /* slider */
+  --slider-width: 100%;
+  --slider-height: 6px;
+  --slider-bg: rgb(82, 82, 82);
+  --slider-border-radius: 999px;
+  /* level */
+  --level-color: #fff;
+  --level-transition-duration: .1s;
+  /* icon */
+  --icon-margin: 15px;
+  --icon-color: var(--slider-bg);
+  --icon-size: 25px;
+
+  cursor: pointer;
+  display: block; /* Change to block for centering */
+  position: relative;
+  padding-top: 36px;
+  width: 90%; /* Adjust for centering */
+  max-width: 300px; /* Optional: limit maximum width */
+  margin: 0 auto; /* Center horizontally */
+  box-sizing: border-box;
+}
+
+.slider .volume {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--icon-margin);
+  color: var(--icon-color);
+  width: var(--icon-size);
+  height: auto;
+  position: absolute;
+  top: calc(36px + (var(--slider-height) / 2) - (var(--icon-size) / 2));
+  right: 0;
+}
+
+.slider .level {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: calc(100% - var(--icon-size) - var(--icon-margin));
+  height: var(--slider-height);
+  background: var(--slider-bg);
+  overflow: hidden;
+  border-radius: var(--slider-border-radius);
+  -webkit-transition: height var(--level-transition-duration);
+  -o-transition: height var(--level-transition-duration);
+  transition: height var(--level-transition-duration);
+  cursor: inherit;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0;
+}
+
+.slider .level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+  box-shadow: -200px 0 0 200px var(--level-color);
+}
+
+.slider:hover .level {
+  height: calc(var(--slider-height) * 2);
+}
+
+
+/* End Of Audio Control Style */
+
+/* Start Of Guess and Image Loaded Display */
+.displaytext {
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.displaytext:hover,
+.displaytext:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+/* End Of Guess and Image Loaded Display */
+
+/* Start Of Login Form Design */
+
+/* End Of Login Form Design */
+
+
+/* Start of @Media, This is where I make everything look good in responsive views */
+@media (max-width: 768px) {
+  #message {width: 90%;font-size: 1rem; padding: 1rem;}
+  #message h2 {font-size: 2rem;}
+}
+@media (max-width: 825px){
+  /*#message{background-color: gray;/* I removed the transparency to reduce distraction from moving background}*/
+}
+@media (max-width: 500px){
+  #message{width: 100%;}
+  #pics{padding: 0px 15px 0px 15px;}
+  .slider{width: 100%;}
+  .container{ max-width: 95%; padding: 5px 0px 5px 0px;}
+}
+@media (max-width: 1010px){
+  .loading span {width: 5%;height: 25%;}
+}
+
+/* End of @Media */
+
+
+
+
+
+
+
+
+
+
+
+
