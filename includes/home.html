@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 session_start();
 require 'dbconn.php';
 
@@ -11,7 +11,7 @@ if (isset($_SESSION['userid'])) {
     // Initially, the page loads with default values for oldscore and newscore
     $oldscore = 0;
     $newscore = 0;
-    ?>
+    ?>-->
 
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if (isset($_SESSION['userid'])) {
 </head>
 <body>
     
-    <div id="loading-screen">
+    <!--<div id="loading-screen">
         <div class="loading">
           <span></span>
           <span></span>
@@ -38,8 +38,8 @@ if (isset($_SESSION['userid'])) {
           <span></span>
           <span></span>
         </div>
-      </div>
-
+      </div>-->
+<!--
       <header class="masthead">
                 <div class="container">
                     <h1>Guess the Word</h1>
@@ -50,7 +50,7 @@ if (isset($_SESSION['userid'])) {
                     <h2>Welcome, <?php echo htmlspecialchars($username); ?>!</h2>
                 <p id="highScore">High Score: <?php echo htmlspecialchars($oldscore); ?></p>
                 <p id="currentScore">Your Score: <?php echo htmlspecialchars($newscore); ?></p>
-                <form action="logout.php" method="POST">
+                <form action="logout.html" method="POST">
                 <button type="submit" class="button load-more-button">Logout</button>
                 </form>
                 </div>
@@ -58,7 +58,7 @@ if (isset($_SESSION['userid'])) {
         // Function to fetch the latest score using AJAX
         function fetchScores() {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'fetch_score.php', true);  // This file will fetch the latest score
+            xhr.open('GET', 'fetch_score.html', true);  // This file will fetch the latest score
             xhr.onload = function () {
                 if (xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
@@ -82,7 +82,7 @@ if (isset($_SESSION['userid'])) {
     $guestNewScore = 0; // Static score for guest for testing purposes
     ?>
 
-
+-->
     <!-- For logged-out users, display the static points or any default score-->
     <!DOCTYPE html>
 <html lang="en">
@@ -117,10 +117,10 @@ if (isset($_SESSION['userid'])) {
                         To play, click "Play!" You'll see an image. Guess the word used to search for that image and enter it in the field. Click "Guess." If your guess is incorrect, try again or load more photos for additional clues. Points are deducted for each extra photo loaded or incorrect guess. Hover your mouse over the photo to zoom in. PLEASE LOGIN FIRST TO RECORD YOUR SCORE. """"Note: Scoring is currently unavailable. We apologize for the inconvenience.""""
                     </p>
                 <div class="playercard">
-                    <h2>Welcome, <?php echo htmlspecialchars($guestUsername); ?>!</h2>
-                <p id="highScore">High Score: <?php echo htmlspecialchars($guestOldScore); ?></p>
-                <p id="currentScore">Your Score: <?php echo htmlspecialchars($guestNewScore); ?></p>
-                <form action="../index.php" method="POST">
+                    <h2>Welcome<!--, <?php echo htmlspecialchars($guestUsername); ?>-->!</h2>
+                <p id="highScore">High Score: <!--<?php echo htmlspecialchars($guestOldScore); ?>--></p>
+                <p id="currentScore">Your Score: <!--<?php echo htmlspecialchars($guestNewScore); ?>--></p>
+                <form action="../index.html" method="POST">
                 <button type="submit" class="login-button">Login</button>
                 </form>
                 </div>
@@ -239,11 +239,12 @@ if (isset($_SESSION['userid'])) {
 
 
 </body>
+<!--
 <script>
 $(document).ready(function () {
     // Fetch guest score when the page loads
     $.ajax({
-        url: "fetch_guest_score.php",
+        url: "fetch_guest_score.html",
         method: "GET",
         dataType: "json",
         success: function (data) {
@@ -255,7 +256,7 @@ $(document).ready(function () {
     // Function to update guest score
     function updateGuestScore(newScore) {
         $.ajax({
-            url: "update_guest_score.php",
+            url: "update_guest_score.html",
             method: "POST",
             data: { newscore: newScore },
             dataType: "json",
@@ -274,7 +275,7 @@ $(document).ready(function () {
     // Function to re-fetch guest score
     function fetchGuestScore() {
         $.ajax({
-            url: "fetch_guest_score.php",
+            url: "fetch_guest_score.html",
             method: "GET",
             dataType: "json",
             success: function (data) {
@@ -285,7 +286,7 @@ $(document).ready(function () {
     }
 });
 
-</script>
+</script>-->
 
 
 <script src="../js/word_list.js"></script>

@@ -125,7 +125,7 @@ function onGameOver(score) {
 // Ensure this function is called correctly after the game
 function updateScore(score) {
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '../includes/update_score.php', true);
+    xhr.open('POST', '../includes/update_score.html', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     let data;
@@ -163,7 +163,7 @@ function updateScore(score) {
 // Fetch scores from the database
 function fetchScores() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '../includes/fetch_guess_score.php', true);
+    xhr.open('GET', '../includes/fetch_guess_score.html', true);
     xhr.onload = function () {
         if (xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);

@@ -1,3 +1,5 @@
+/** 
+
 document.querySelector(".button1").addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -9,7 +11,7 @@ document.querySelector(".button1").addEventListener("click", function (e) {
         return;
     }
 
-    fetch("includes/login.php", {
+    fetch("includes/login.html", {
         method: "POST",
         body: new URLSearchParams({ username, password }),
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -22,7 +24,7 @@ document.querySelector(".button1").addEventListener("click", function (e) {
         // Check for success
         if (data.trim() === "success") {
             console.log("Login successful. Redirecting...");
-            window.location.href = "includes/home.php";
+            window.location.href = "includes/home.html";
         } else {
             // Log failed data and response, and include it in the alert
             console.error("Login failed! Data:", data);
